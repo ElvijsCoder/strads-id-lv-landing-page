@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elvijs Strads Journey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <!-- Font import for Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Background container for Vanta.js -->
+    <div id="background-vanta"></div>
+
+    <!-- Landing page content -->
     <div class="landing-container">
-        <h1 class="landing-title">Elvijs Strads Journey</h1>
+        <h1 id="title" class="landing-title">Elvijs Strads Journey</h1>
         <div class="scroll-arrow">
             <img src="https://github.com/yourusername/your-repository/raw/main/arrow-down-download-svgrepo-com.svg" alt="Scroll Down Arrow" />
             <p>Scroll Down</p>
         </div>
     </div>
 
-    <div class="content-box">
+    <!-- Content that slides up when scrolling -->
+    <div id="contentBox" class="content-box">
         <p>Random text content here...</p>
     </div>
 
+    <!-- Vanta.js Scripts -->
     <script src="p5.min.js"></script>
     <script src="vanta.trunk.min.js"></script>
     <script>
     VANTA.TRUNK({
-        el: "body",
+        el: "#background-vanta", // Correct the element selector
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -33,7 +40,24 @@
         scale: 1.00,
         scaleMobile: 1.00,
         color: 0x459853
-    })
+    });
+    </script>
+
+    <!-- Scroll Effect Script -->
+    <script>
+    window.addEventListener("scroll", () => {
+        const title = document.getElementById('title');
+        const contentBox = document.getElementById('contentBox');
+        
+        // Slide the title up when scrolling
+        if (window.scrollY > 50) {
+            title.style.transform = `translate(-50%, -${window.scrollY}px)`;
+            contentBox.classList.add('active');
+        } else {
+            title.style.transform = 'translate(-50%, -50%)'; // Reset title position
+            contentBox.classList.remove('active');
+        }
+    });
     </script>
 </body>
 </html>
