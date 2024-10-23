@@ -67,7 +67,7 @@ body {
 }
 
 .content h1 {
-    font-family: 'Oswald', sans-serif; /* Updated font family */
+    font-family: 'Oswald', sans-serif; /* Updated font family to Oswald */
     font-size: 48px;
     margin-bottom: 20px;
 }
@@ -75,26 +75,4 @@ body {
 .content p {
     font-size: 18px;
     line-height: 1.5;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Neon Light Effect */
-.neon {
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-}
-
-/* Footer Styling */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: relative;
-    bottom: 0;
-}
-
-/* When the nav is visible, bring it back into view */
-.nav.visible {
-    transform: translateX(0);
-}
+    
