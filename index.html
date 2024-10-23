@@ -4,76 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strads Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            height: 100vh;
-            background: url('https://t3.ftcdn.net/jpg/04/34/82/70/360_F_434827021_Es0jUoe8ZIiL9Wh7tSSO5BUK4a6QZk3e.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            display: flex;
-        }
-
-        /* Side Navigation Styling */
-        .nav {
-            width: 300px;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 30px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .nav a {
-            color: #fff;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 15px;
-            margin: 10px 0;
-            border: 2px solid #0ff;
-            border-radius: 10px;
-            display: block;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .nav a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-color: #f00;
-        }
-
-        /* Content Section Styling */
-        .content {
-            flex: 1;
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.5;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Neon Light Effect */
-        .neon {
-            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -86,7 +21,7 @@
         <a href="#contact" class="neon">Contact</a>
     </div>
 
-    <div class="content">
+    <div class="content" id="main">
         <div>
             <h1 class="neon">Welcome to Strads Landing Page</h1>
             <p>
@@ -94,5 +29,9 @@
             </p>
         </div>
     </div>
+
+    <footer>
+        <p>© 2024 Strads. All rights reserved.</p>
+    </footer>
 </body>
 </html>
