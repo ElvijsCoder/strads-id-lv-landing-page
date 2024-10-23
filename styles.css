@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Comfortaa', sans-serif; /* Use Comfortaa font for overall styling */
 }
 
 /* Container for the Vanta.js background */
@@ -19,49 +20,69 @@ body, html {
 /* Title Styling */
 .title {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-family: 'Cyberpunk Neu', sans-serif;
+    font-family: 'Comfortaa', sans-serif; /* Font close to Lemon Jelly */
     font-size: 48px;
     text-align: center;
     z-index: 10;
     transition: transform 0.5s ease-out;
+    white-space: nowrap; /* Ensures that title stays on a single line */
 }
 
-/* Content Box Styling */
-.content-box {
-    position: fixed;
-    bottom: -50%;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+/* Scroll Indicator Styles */
+.scroll-indicator {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 24px;
     color: white;
+    font-weight: bold;
+}
+
+.scroll-indicator small {
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Content Box that slides up */
+.content-box {
+    position: relative;
+    top: 100vh; /* Initially positioned off-screen */
     padding: 50px;
-    opacity: 0;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100%);
+    z-index: 5;
 }
 
-/* Active state when scrolling */
-body.scrolled .title {
-    transform: translate(-50%, -100%); /* Slide the title up out of view */
+.content-box.active {
+    transform: translateY(0); /* Slide content up into view */
 }
 
-body.scrolled .content-box {
-    transform: translateY(-100%);
-    opacity: 1;
-}
-
-.content p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Add some padding for better readability */
-.content-box .content {
-    max-width: 600px;
+.content {
+    max-width: 800px;
     margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
 }
