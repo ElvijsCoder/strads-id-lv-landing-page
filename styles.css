@@ -88,6 +88,7 @@ footer {
     position: relative;
     bottom: 0;
 
+/* Add this to your existing CSS file */
 .nav {
     width: 300px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -95,10 +96,17 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
-    opacity: 1; /* Default to visible */
     position: absolute; /* Position it absolutely to manage its visibility */
     left: 0; /* Align it to the left */
+    top: 0; /* Align to the top */
+    height: 100vh; /* Full height */
+    transform: translateX(-100%); /* Start off-screen */
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+}
+
+/* When the nav is visible, bring it back into view */
+.nav.visible {
+    transform: translateX(0); /* Slide into view */
 }
 
 }
