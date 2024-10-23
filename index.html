@@ -38,13 +38,11 @@
             if (event.clientX < 300) { // 300 is the width of the nav
                 if (!navVisible) {
                     nav.classList.add('visible');
-                    content.classList.remove('hidden');
                     navVisible = true;
                 }
             } else {
                 if (navVisible) {
                     nav.classList.remove('visible');
-                    content.classList.add('hidden');
                     navVisible = false;
                 }
             }
@@ -54,4 +52,3 @@
     </script>
 </body>
 </html>
-
