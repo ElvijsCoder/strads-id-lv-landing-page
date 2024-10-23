@@ -7,7 +7,7 @@
 
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;a
     height: 100vh;
     background: url('https://t3.ftcdn.net/jpg/04/34/82/70/360_F_434827021_Es0jUoe8ZIiL9Wh7tSSO5BUK4a6QZk3e.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -87,4 +87,18 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     bottom: 0;
+
+.nav {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    opacity: 1; /* Default to visible */
+    position: absolute; /* Position it absolutely to manage its visibility */
+    left: 0; /* Align it to the left */
+}
+
 }
