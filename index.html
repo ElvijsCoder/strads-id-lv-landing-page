@@ -4,51 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elvijs Strads Journey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cyberpunk+Neu:wght@700&display=swap" rel="stylesheet"> <!-- Cyberpunk Font -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="nav" id="nav">
-        <a href="#main" class="neon">Main Screen</a>
-        <a href="#about" class="neon">About</a>
-        <a href="#services" class="neon">Services</a>
-        <a href="#works" class="neon">Works</a>
-        <a href="#contact" class="neon">Contact</a>
+    <div class="title" id="title">
+        <h1>Elvijs Strads Journey</h1>
     </div>
 
-    <div class="content" id="main">
-        <div>
-            <h1 class="neon">Welcome to Strads Landing Page</h1>
-            <p>
-                This is the main content area. You can customize this text to talk about your services, show your portfolio, or give information about your company.
-            </p>
-        </div>
+    <div class="content" id="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Curabitur pretium tincidunt lacus. Nulla gravida orci a odio, et feugiat tellus malesuada et. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. 
+        </p>
     </div>
 
-    <footer>
-        <p>© 2024 Strads. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const nav = document.getElementById('nav');
-        const content = document.getElementById('main');
-        let navVisible = false;
-
-        const handleMouseMove = (event) => {
-            if (event.clientX < 300) { // 300 is the width of the nav
-                if (!navVisible) {
-                    nav.classList.add('visible');
-                    navVisible = true;
-                }
-            } else {
-                if (navVisible) {
-                    nav.classList.remove('visible');
-                    navVisible = false;
-                }
-            }
-        };
-
-        document.addEventListener('mousemove', handleMouseMove);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
