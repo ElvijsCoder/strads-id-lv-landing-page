@@ -51,6 +51,7 @@
             const title = document.getElementById('title');
             const contentBox = document.getElementById('contentBox');
 
+            // Slide the title up when scrolling
             if (window.scrollY > 50) {
                 title.style.transform = `translate(-50%, -${window.scrollY}px)`;
                 contentBox.classList.add('active');
