@@ -15,12 +15,6 @@ header {
     color: #fff;
     text-align: center;
     position: relative; /* To position children */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
-}
-
-header.hidden {
-    transform: translateY(-100%); /* Move header up */
-    opacity: 0; /* Fade out */
 }
 
 header h1 {
@@ -29,21 +23,6 @@ header h1 {
 
 header p {
     margin: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
 }
 
 section {
@@ -61,10 +40,6 @@ section.visible {
     opacity: 1; /* Fade in */
 }
 
-.project {
-    margin: 10px 0;
-}
-
 footer {
     text-align: center;
     padding: 10px;
@@ -73,4 +48,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Hide sections initially */
+.hidden {
+    display: none; /* Initially hide sections */
 }
