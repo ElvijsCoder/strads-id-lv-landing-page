@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav" id="nav">
         <a href="#main" class="neon">Main Screen</a>
         <a href="#about" class="neon">About</a>
         <a href="#services" class="neon">Services</a>
@@ -33,5 +33,36 @@
     <footer>
         <p>© 2024 Strads. All rights reserved.</p>
     </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        let navVisible = true;
+
+        // Function to show/hide the navigation
+        const handleMouseMove = (event) => {
+            if (event.clientX < 300) { // 300 is the width of the nav
+                nav.style.opacity = 1; // Show the nav
+                navVisible = true;
+            } else {
+                nav.style.opacity = 0; // Hide the nav
+                navVisible = false;
+            }
+        };
+
+        // Event listeners
+        document.addEventListener('mousemove', handleMouseMove);
+
+        // Optional: Hide the nav after a delay if the mouse is not near it
+        setInterval(() => {
+            if (!navVisible) {
+                nav.style.transition = 'opacity 0.5s ease';
+                nav.style.display = 'none'; // Keep it hidden
+            } else {
+                nav.style.display = 'flex'; // Show it again
+                nav.style.transition = 'opacity 0.5s ease';
+                nav.style.opacity = 1;
+            }
+        }, 1000); // Check every second
+    </script>
 </body>
 </html>
