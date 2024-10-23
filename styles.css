@@ -18,13 +18,13 @@ body, html {
 }
 
 /* Title Styling */
-.title {
+.landing-title {
     position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-family: 'Comfortaa', sans-serif; /* Similar font styling */
+    font-family: 'Comfortaa', sans-serif; /* Ensure using correct font */
     font-size: 48px;
     text-align: center;
     z-index: 10;
@@ -35,4 +35,42 @@ body, html {
 /* Scroll Arrow Styling */
 .scroll-arrow {
     display: flex;
-    f
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.scroll-arrow img {
+    width: 50px; /* Adjust arrow size */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.scroll-arrow p {
+    font-size: 14px;
+    color: white;
+}
+
+/* Content Box Styling - Initially hidden below viewport */
+.content-box {
+    position: relative;
+    top: 100vh; /* Positioned off-screen initially */
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100%);
+    z-index: 5;
+}
+
+.content-box.active {
+    transform: translateY(0); /* Slide into view when active */
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
