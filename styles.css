@@ -1,13 +1,90 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
     background: url('https://t3.ftcdn.net/jpg/04/34/82/70/360_F_434827021_Es0jUoe8ZIiL9Wh7tSSO5BUK4a6QZk3e.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    height: 100vh;
-    margin: 0;
+    display: flex;
+}
+
+/* Side Navigation Styling */
+.nav {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #f00;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Content Section Styling */
+.content {
+    flex: 1;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0; /* Start invisible for fade-in effect */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
 }
 
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Neon Light Effect */
+.neon {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+}
