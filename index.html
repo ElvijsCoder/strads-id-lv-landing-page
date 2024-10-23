@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strads Landing Page</title>
+    <title>Elvijs Strads Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet"> <!-- Google Font -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
     <div class="nav" id="nav">
@@ -36,33 +31,26 @@
 
     <script>
         const nav = document.getElementById('nav');
-        let navVisible = true;
+        const content = document.getElementById('main');
+        let navVisible = false;
 
-        // Function to show/hide the navigation
         const handleMouseMove = (event) => {
             if (event.clientX < 300) { // 300 is the width of the nav
-                nav.style.opacity = 1; // Show the nav
-                navVisible = true;
+                if (!navVisible) {
+                    nav.classList.add('visible');
+                    content.classList.remove('hidden');
+                    navVisible = true;
+                }
             } else {
-                nav.style.opacity = 0; // Hide the nav
-                navVisible = false;
+                if (navVisible) {
+                    nav.classList.remove('visible');
+                    content.classList.add('hidden');
+                    navVisible = false;
+                }
             }
         };
 
-        // Event listeners
         document.addEventListener('mousemove', handleMouseMove);
-
-        // Optional: Hide the nav after a delay if the mouse is not near it
-        setInterval(() => {
-            if (!navVisible) {
-                nav.style.transition = 'opacity 0.5s ease';
-                nav.style.display = 'none'; // Keep it hidden
-            } else {
-                nav.style.display = 'flex'; // Show it again
-                nav.style.transition = 'opacity 0.5s ease';
-                nav.style.opacity = 1;
-            }
-        }, 1000); // Check every second
     </script>
 </body>
 </html>
