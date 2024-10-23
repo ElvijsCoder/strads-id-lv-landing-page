@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elvijs Strads Journey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cyberpunk+Neu:wght@700&display=swap" rel="stylesheet"> <!-- Cyberpunk Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Font similar to Lemon Jelly -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,16 +14,19 @@
     <!-- Title Section -->
     <div class="title" id="title">
         <h1>Elvijs Strads Journey</h1>
+        <div class="scroll-indicator">
+            <div class="circle">
+                <span class="arrow">↓</span>
+            </div>
+            <small>Scroll down</small>
+        </div>
     </div>
 
-    <!-- Content Section that slides up -->
+    <!-- Content Section that slides up when scrolling -->
     <div class="content-box" id="contentBox">
         <div class="content">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
         </div>
     </div>
@@ -31,8 +34,6 @@
     <!-- Include Vanta.js and p5.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.trunk.min.js"></script>
-    
-    <!-- JavaScript for animations -->
     <script src="script.js"></script>
 </body>
 </html>
