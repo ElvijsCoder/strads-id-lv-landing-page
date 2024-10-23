@@ -14,7 +14,6 @@ header {
     background: #333;
     color: #fff;
     text-align: center;
-    position: relative; /* To position children */
 }
 
 header h1 {
@@ -30,9 +29,10 @@ section {
     margin: 20px;
     background: #fff;
     border-radius: 5px;
-    transform: translateY(100%); /* Start off-screen */
+    transform: translateY(50px); /* Start slightly below */
     opacity: 0; /* Start invisible */
     transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    position: relative; /* Allows stacking of sections */
 }
 
 section.visible {
