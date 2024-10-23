@@ -1,25 +1,17 @@
-// Function to update background position
-const updateBackgroundPosition = (x, y) => {
-    const el = document.body;
-    const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
-    el.style.setProperty('--posX', x - l - w / 2);
-    el.style.setProperty('--posY', y - t - h / 2);
-};
-
-// Mouse movement event for desktop
-document.body.addEventListener("pointermove", (e) => {
-    const { clientX: x, clientY: y } = e;
-    updateBackgroundPosition(x, y);
+// Initialize Vanta.js TRUNK animation
+VANTA.TRUNK({
+  el: "#background-vanta", // Make sure this ID matches the one in HTML
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x459853
 });
 
-// Touch movement event for mobile
-document.body.addEventListener("touchmove", (e) => {
-    const touch = e.touches[0];
-    const { clientX: x, clientY: y } = touch;
-    updateBackgroundPosition(x, y);
-});
-
-// Scroll event to hide title and show content box
+// Function to slide the title up and the content box in on scroll
 window.addEventListener('scroll', () => {
     const scrollThreshold = 50; // Number of pixels to scroll before the effect kicks in
     if (window.scrollY > scrollThreshold) {
