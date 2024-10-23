@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elvijs Strads Journey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Font similar to Lemon Jelly -->
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Container for Vanta Background -->
-    <div id="background-vanta"></div>
-    
-    <!-- Title Section -->
-    <div class="title" id="title">
-        <h1>Elvijs Strads Journey</h1>
-        <div class="scroll-indicator">
-            <div class="circle">
-                <img src="download_9144327.png" alt="Scroll Arrow" class="arrow-image" /> <!-- Use the uploaded arrow image -->
-            </div>
-            <small>Scroll down</small>
+    <div class="landing-container">
+        <h1 class="landing-title">Elvijs Strads Journey</h1>
+        <div class="scroll-arrow">
+            <img src="https://github.com/yourusername/your-repository/raw/main/arrow-down-download-svgrepo-com.svg" alt="Scroll Down Arrow" />
+            <p>Scroll Down</p>
         </div>
     </div>
 
-    <!-- Content Section that slides up when scrolling -->
-    <div class="content-box" id="contentBox">
-        <div class="content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </div>
+    <div class="content-box">
+        <p>Random text content here...</p>
     </div>
 
-    <!-- Include Vanta.js and p5.js from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.trunk.min.js"></script>
-    <script src="script.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="vanta.trunk.min.js"></script>
+    <script>
+    VANTA.TRUNK({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x459853
+    })
+    </script>
 </body>
 </html>
