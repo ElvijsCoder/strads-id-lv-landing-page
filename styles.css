@@ -51,10 +51,9 @@ body, html {
     justify-content: center;
 }
 
-.arrow {
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
+.arrow-image {
+    width: 30px; /* Adjust size to fit within the circle */
+    height: 30px;
 }
 
 .scroll-indicator small {
