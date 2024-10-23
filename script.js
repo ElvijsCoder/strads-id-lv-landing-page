@@ -1,6 +1,6 @@
-// Initialize Vanta.js TRUNK animation
+// Initialize Vanta.js Background
 VANTA.TRUNK({
-  el: "#background-vanta", // Make sure this ID matches the one in HTML
+  el: "#background-vanta",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
@@ -11,12 +11,17 @@ VANTA.TRUNK({
   color: 0x459853
 });
 
-// Function to slide the title up and the content box in on scroll
-window.addEventListener('scroll', () => {
-    const scrollThreshold = 50; // Number of pixels to scroll before the effect kicks in
-    if (window.scrollY > scrollThreshold) {
-        document.body.classList.add('scrolled');
-    } else {
-        document.body.classList.remove('scrolled');
-    }
+// Handling the scroll effect for the title and content
+window.addEventListener("scroll", () => {
+  const title = document.getElementById('title');
+  const contentBox = document.getElementById('contentBox');
+  
+  // Slide the title up when scrolling
+  if (window.scrollY > 50) {
+    title.style.transform = `translate(-50%, -${window.scrollY}px)`;
+    contentBox.classList.add('active');
+  } else {
+    title.style.transform = 'translate(-50%, -50%)'; // Reset title position
+    contentBox.classList.remove('active');
+  }
 });
